@@ -6,3 +6,4 @@ let Sidebarauto = ()=>{
 }
 Navmenu.addEventListener("click", Sidebarauto)
 Sidebar.addEventListener("click", Sidebarauto)
+Sidebar.addEventListener("click", Sidebarauto)
