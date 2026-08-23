@@ -62,6 +62,7 @@
     --text-font-medium: "GeneralSans-Medium";
     --text-font-bold: "GeneralSans-Bold";
     --text-font-regular: "GeneralSans-Regular";
+    --icon-hover: #ebebeb;
 }
 
 /* Navbar */
@@ -79,19 +80,18 @@
 .nav-logo-img {
     height: 100%;
     width: 100%;
-    object-fit: fill;
+    object-fit: contain;
     min-width: 200px;
 }
 
 .nav-right {
-    height: 305px;
-    width: 305px;
-    border: 2px solid;
+    height: 150px;
+    width: 260px;
 }
 
 .nav-left {
-    border: 2px solid;
     display: flex;
+    align-items: center;
     gap: 32px;
 }
 
@@ -105,9 +105,8 @@
 .navbar-links li a {
     text-decoration: none;
     font-family: var(--text-font-regular);
-    font-size: 18px;
+    font-size: 16.8px;
     color: var(--text-colour);
-    border: 2px solid;
 }
 
 .navbar-links li a:hover {
@@ -122,19 +121,181 @@
     border: none;
     color: var(--text-colour);
     font-family: var(--text-font-regular);
-    font-size: 20px;
+    font-size: 18.8px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
 }
 
+.nav-menu {
+    display: none;
+    height: 45px;
+    width: 45px;
+}
+
 .nav-CTA:hover {
     cursor: pointer;
     background-color: var(--CTA-hover-colour);
 }
-@media (1024px >= width) {
-.navbar-container {
-    padding: 0 40px;
+
+/* Sidebar */
+.sidebar-container {
+    height: auto;
+    width: 100%;
+    padding: 0 0 35px 0;
+    position: absolute;
+    background-color: #fafafab2;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 15px var(--text-colour);
+    transform: translateY(-150%);
+
 }
+
+.sidebar-container-open {
+    transform: translateY(-100px);
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    border: 2px solid;
+}
+
+.sidebar-links a {
+    gap: 25px;
+    display: flex;
+    height: 50px;
+    font-family: var(--text-font-regular);
+    color: var(--text-colour);
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.sidebar-links a:hover {
+    color: var(--text-hover-colour);
+    background-color: #B1B1B1;
+}
+
+.sidebar-CTA {
+    height: 50px;
+    margin: 0 12px;
+    border-radius: 100px;
+    background-color: var(--CTA-colour);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--text-font-regular);
+    font-size: 16.8px;
+    border: none;
+}
+
+.sidebar-CTA:hover {
+    background-color: var(--CTA-hover-colour);
+    cursor: pointer;
+}
+
+.sidebar-close {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 100px;
+    border: 2px solid;
+    margin-bottom: 40px;
+}
+
+.sidebar-close:hover {
+    background-color: var(--icon-hover);
+    fill: var(--text-hover-colour);
+}
+
+.sidebar-close-icon {
+    height: 37.25px;
+    fill: var(--text-colour);
+    width: 37.25px;
+}
+
+@media (1024px >=width) {
+    .navbar-container {
+        padding: 0 40px;
+    }
+}
+
+@media (936px >=width) {
+    .navbar-links {
+        display: none;
+    }
+
+    .nav-left {
+        gap: 16px;
+    }
+
+    .nav-menu {
+        display: initial;
+    }
+
+    .nav-right {
+        height: 283px;
+        width: 283px;
+    }
+
+    .nav-CTA {
+        width: 190px;
+        height: 45px;
+        font-size: 16.8px;
+    }
+
+    .sidebar-links a {
+        height: 45px;
+    }
+
+
+    .navbar-container {
+        gap: 32px;
+    }
+}
+
+@media (608px >=width) {
+    .navbar-container {
+        padding: 0 12px;
+    }
+
+    .nav-right {
+        height: 87px;
+        width: 150px;
+    }
+
+    .nav-CTA {
+        display: none;
+    }
+
+    .nav-menu {
+        height: 45px;
+        width: 45px;
+    }
+
+    .sidebar-CTA {
+        display: initial;
+        display: flex;
+    }
+
+    .sidebar-links a {
+        height: 40px;
+    }
+
+    .sidebar-content {
+        gap: 16px;
+    }
 }
