@@ -502,15 +502,15 @@
 
 .deshies-cards {
     border: 1px solid var(--text-colour);
-    height: 385px;
-    width: 400px;
+    height: 440px;
+    width: 458px;
     min-width: 350px;
     overflow: hidden;
     border-radius: 8px;
 }
 
 .deshies-images {
-    height: 220px;
+    height: 280px;
     width: auto;
 }
 
@@ -521,16 +521,16 @@
 }
 
 .deshies-content {
-    height: 40%;
+    height: 183px;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
 .top-deshies-title {
-    height: 140px;
+    height: 100px;
     font-family: var(--text-font-medium);
-    font-size: 45.06px;
+    font-size: 37px;
     margin: 0 0 6px 0;
     overflow: hidden;
     padding: 0px 10px 0 10px;
@@ -558,6 +558,11 @@
     border-radius: 100px;
     border: none;
     background-color: var(--CTA-colour);
+}
+.deshies-CTA:hover {
+    color: var(--text-hover-colour);;
+    cursor: pointer;
+    background-color: var(--CTA-hover-colour);
 }
 
 @media (1024px >=width) {
@@ -623,7 +628,7 @@
 
     /* Top-deshies */
     .top-deshies-heading {
-        font-size: 31px;
+        font-size: 45px;
     }
 
     .Top-deshies {
@@ -666,11 +671,35 @@
         padding: 0px 10px 0 10px;
         line-height: 45px;
     }
+
 }
 
-/* @media (704px >=width) {
-  
-} */
+@media (788px >=width) {
+    .deshies-cards {
+        height: 337px;
+        width: 264px;
+        min-width: 264px;
+    }
+        .top-deshies-title {
+        height: 70px;
+        font-size: 31px;
+        padding: 0px 5px 0 5px;
+        line-height: 30px;
+    }
+.deshies-price {
+    padding: 0px 5px 0 5px;
+    font-size: 26px;
+}
+.deshies-CTA {
+    height: 37px;
+    width: 98px;
+    font-size: 20px;
+}
+.top-deshies-menu {
+    align-items: center;
+    font-size: 26px;
+}
+}
 @media (608px >=width) {
     .navbar-container {
         padding: 0 5px;
@@ -753,12 +782,12 @@
     .top-deshies-menu {
         height: 20px;
         gap: 4px;
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .top-deshies-menu-icon {
-        height: 20px;
-        width: 20px;
+        height: 22px;
+        width: 22px;
     }
 
     .deshies-cards {
@@ -768,9 +797,10 @@
     }
 
     .top-deshies-title {
-        font-size: 31px;
-        margin: 0 0 3px 0;
-        padding: 0px 10px 0 10px;
+        font-size: 33px;
+        margin: 0 0 6px 0;
+        padding: 0px 5px 0 5px;
+        height: 100px;
         line-height: 35px;
     }
 
@@ -850,8 +880,8 @@
     }
 
     .deshies-cards {
-        height: 260px;
-        width: 349px;
+        height: 237px;
+        width: 149px;
         min-width: 142px;
     }
 
@@ -863,8 +893,9 @@
         line-height: 20px;
         padding: 0;
         padding: 0 5px;
-        height: 120px;
-        font-size: 18.8px;
+        overflow: hidden;
+        height: 43px;
+        font-size: 20px;
     }
 
     .deshies-price {
