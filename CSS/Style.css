@@ -776,7 +776,7 @@
 
     /* Top-deshies */
     .Top-deshies {
-        padding: 0 12px;
+        padding: 0 0px 0 12px;
     }
 
     .top-deshies-menu {
@@ -808,6 +808,12 @@
         height: 200px;
         width: auto;
     }
+    .forword-arrow{
+    right: 1%;
+}
+    .reverce-arrow{
+    left: -2%;
+}
 }
 
 @media (510px >=width) {
