@@ -573,7 +573,6 @@
     padding: 0 80px 0px 80px;
     height: 70%;
     width: 100%;
-    border: 2px solid red;
     overflow: auto;
 }
 
@@ -588,12 +587,12 @@
     height: 56px;
     width: 100%;
     display: flex;
+    margin: 0 0 46px 0;
     gap: 4px;
     overflow: hidden;
     justify-content: start;
     align-items: center;
     flex-wrap: nowrap;
-    border: 2px solid red;
     overflow-x: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -601,12 +600,11 @@
 
 .tab {
     width: auto;
-    /* Sizes the tab based on its text content */
     padding: 8px 32px;
     white-space: nowrap;
     scroll-behavior: smooth;
     height: 50px;
-    /* min-width: 250px; */
+    cursor: pointer;
     border-radius: 100px;
     background-color: var(--text-colour);
     color: var(--Bg-colour);
@@ -618,9 +616,111 @@
     align-items: center;
 }
 
-@media (1024px >=width) {
+.menu-deshies-heading {
+    font-family: var(--Heading-font-medium);
+    font-size: 43px;
+}
+.Menu-deshies-main{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.deshies-main {
+    height: 40%;
+    width: 100%;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    overflow: hidden;
+}
+
+.dishies-card {
+    height: auto;
+    border: 2px solid black;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.menu-deshies-images {
+    height: 210px;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 8px 8px 0 0 ;
+}
+
+.menu-deshies-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu-dishies-card-contant {
+    margin: 8px;
+}
+.menu-topdeshies-icon{
+height: 25px;
+transform: rotate(180deg);
+    width: 25px;
+}
+.menu-card-title {
+    font-family: var(--text-font-medium);
+    font-size: 30px;
+    line-height: 35px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 72px;
+    color: var(--text-colour);
+}
+
+.menu-card-para {
+    font-family: var(--text-font-regular);
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 4px;
+    margin-bottom: 7px;
+    color: var(--text-colour);
+}
+.menu-card-prize{
+    font-family: var(--text-font-bold);
+    font-size: 28px;
+    color: var(--text-colour);
+}
+.menu-card-CTA{
+    height: 40px;
+    width: 100%;
+    font-family: var(--text-font-medium);
+    font-size: 18.8px;
+    background-color: var(--CTA-colour);
+    color: var(--text-colour);
+    border: none;
+    border-radius: 100px;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    fill: var(--text-colour);
+}
+.menu-card-CTA:hover{
+    cursor: pointer;
+background-color: var(--CTA-hover-colour);
+}
+.menu-card-CTA-icon{
+    height: 25px;
+    width: 25px;
+}
+
+@media (1023px >=width) {
     .navbar-container {
         padding: 0 40px;
+    }
+
+    .deshies-main {
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     }
 }
 
@@ -729,6 +829,7 @@
     .Full-Menu {
         padding: 0 40px;
     }
+
 }
 
 @media (788px >=width) {
@@ -760,6 +861,26 @@
         align-items: center;
         font-size: 26px;
     }
+
+    .menu-deshies-images {
+        height: 190px;
+    }
+.menu-dishies-card-contant {
+    margin: 4px;
+}
+.menu-card-title{
+    font-size: 28px;
+    line-height: 30px;
+    height: 67px;
+}
+.menu-card-para {
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+.menu-card-prize {
+ font-size: 26px;
+}
 }
 
 @media (608px >=width) {
@@ -883,6 +1004,30 @@
     .Full-Menu {
         padding: 0 12px;
     }
+}
+
+@media (444px >=width) {
+    .deshies-main {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    }
+
+    .menu-deshies-images {
+        height: 170px;
+    }
+        .menu-card-title {
+        font-size: 24px;
+        line-height: 30px;
+        height: 62px;
+    }
+    .menu-card-CTA {
+    height: 35px;
+    font-size: 16px;
+    gap: 2px;
+}
+.menu-card-CTA-icon {
+    height: 20px;
+    width: 20px;
+}
 }
 
 @media (510px >=width) {
@@ -1033,5 +1178,36 @@
 
     .full-menu-heading {
         font-size: 35px;
+    }
+
+    .deshies-main {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .deshies-main {
+        gap: 2px;
+    }
+        .menu-dishies-card-contant{
+        margin: 2px;
+    }
+        .menu-card-CTA{
+        height: 30px;
+        font-size: 16px;
+        gap: 2px;
+    }
+    .menu-card-title{
+        font-size: 21px;
+        line-height: 22px;
+        height: 53px;
+    }
+    .menu-card-prize {
+        font-size: 19px;
+    }
+        .menu-card-CTA-icon{
+        height: 18px;
+        width: 18px;
+    }
+    .menu-deshies-images {
+        height: 130px;
     }
 }
