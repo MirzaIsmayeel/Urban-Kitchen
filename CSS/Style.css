@@ -383,7 +383,12 @@
     height: 25px;
     width: 125px;
 }
-
+/* That full section */
+/* .Section2{
+    border: 2px solid red;
+    padding: 0 80px 0 80px;
+    overflow: hidden;
+} */
 /* Top-Deshies */
 .Top-deshies {
     overflow: hidden;
@@ -570,7 +575,7 @@
 /* Full Menu */
 .Full-Menu {
     margin-top: 56px;
-    padding: 0 80px 0px 80px;
+    padding: 0 80px 0 80px;
     height: 70%;
     width: 100%;
     overflow: auto;
@@ -587,7 +592,7 @@
     height: 56px;
     width: 100%;
     display: flex;
-    margin: 0 0 46px 0;
+    margin: 16px 0 46px 0;
     gap: 4px;
     overflow: hidden;
     justify-content: start;
