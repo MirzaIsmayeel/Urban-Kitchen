@@ -692,7 +692,7 @@ transform: rotate(180deg);
     color: var(--text-colour);
 }
 .menu-card-prize{
-    font-family: var(--text-font-bold);
+    font-family: var(--text-font-regular);
     font-size: 28px;
     color: var(--text-colour);
 }
@@ -1207,7 +1207,7 @@ background-color: var(--CTA-hover-colour);
         height: 53px;
     }
     .menu-card-prize {
-        font-size: 19px;
+        font-size: 18px;
     }
         .menu-card-CTA-icon{
         height: 18px;
