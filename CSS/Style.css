@@ -383,17 +383,14 @@
     height: 25px;
     width: 125px;
 }
+
 /* That full section */
-/* .Section2{
-    border: 2px solid red;
-    padding: 0 80px 0 80px;
-    overflow: hidden;
-} */
 /* Top-Deshies */
 .Top-deshies {
     overflow: hidden;
     height: 50%;
     margin-top: 56px;
+    display: none;
     width: 100%;
     padding: 0 80px;
 }
@@ -572,12 +569,60 @@
     background-color: var(--CTA-hover-colour);
 }
 
+/* Cart-Icon */
+.cart {
+    height: 80px;
+    border-radius: 100px;
+    background-color: var(--text-colour);
+    width: 80px;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    fill: var(--Bg-colour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px var(--text-colour);
+}
+
+.cart:hover {
+    cursor: pointer;
+    background-color: var(--text-hover-colour);
+}
+
+.cart-icon {
+    height: 45px;
+    width: 45px;
+}
+
 /* Full Menu */
 .Full-Menu {
     margin-top: 56px;
     height: 70%;
+    overflow-x: hidden;
+    /* display: none; */
     width: 100%;
-    overflow: auto;
+}
+
+.Menu-deshies-menu {
+    height: 25px;
+    display: flex;
+    gap: 8px;
+    padding: 0px 80px;
+    background-color: transparent;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: var(--text-font-regular);
+    width: auto;
+}
+
+.Menu-deshies-menu:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--text-colour);
+    fill: var(--text-colour);
 }
 
 .full-menu-heading {
@@ -602,19 +647,7 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
-.top-deshies-menu{
-    height: 25px;
-    display: flex;
-    gap: 8px;
-    padding: 0 80px;
-    background-color: transparent;
-    border: none;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    font-family: var(--text-font-regular);
-    width: auto;
-}
+
 .tab {
     width: auto;
     padding: 8px 32px;
@@ -638,11 +671,13 @@
     font-size: 43px;
     padding: 0 80px;
 }
-.Menu-deshies-main{
+
+.Menu-deshies-main {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
+
 .deshies-main {
     height: 40%;
     width: 100%;
@@ -655,7 +690,7 @@
 
 .dishies-card {
     height: auto;
-    border: 1px solid var(--text-colour);  
+    border: 1px solid var(--text-colour);
     overflow: hidden;
 
     border-radius: 8px;
@@ -665,7 +700,7 @@
     height: 210px;
     overflow: hidden;
     width: 100%;
-    border-radius: 8px 8px 0 0 ;
+    border-radius: 8px 8px 0 0;
 }
 
 .menu-deshies-image {
@@ -677,11 +712,13 @@
 .menu-dishies-card-contant {
     margin: 8px;
 }
-.menu-topdeshies-icon{
-height: 25px;
-transform: rotate(180deg);
+
+.menu-topdeshies-icon {
+    height: 25px;
+    transform: rotate(180deg);
     width: 25px;
 }
+
 .menu-card-title {
     font-family: var(--text-font-medium);
     font-size: 30px;
@@ -705,12 +742,14 @@ transform: rotate(180deg);
     margin-bottom: 7px;
     color: var(--text-colour);
 }
-.menu-card-prize{
+
+.menu-card-prize {
     font-family: var(--text-font-regular);
     font-size: 28px;
     color: var(--text-colour);
 }
-.menu-card-CTA{
+
+.menu-card-CTA {
     height: 40px;
     width: 100%;
     font-family: var(--text-font-medium);
@@ -725,11 +764,13 @@ transform: rotate(180deg);
     align-items: center;
     fill: var(--text-colour);
 }
-.menu-card-CTA:hover{
+
+.menu-card-CTA:hover {
     cursor: pointer;
-background-color: var(--CTA-hover-colour);
+    background-color: var(--CTA-hover-colour);
 }
-.menu-card-CTA-icon{
+
+.menu-card-CTA-icon {
     height: 25px;
     width: 25px;
 }
@@ -845,22 +886,26 @@ background-color: var(--CTA-hover-colour);
         line-height: 45px;
     }
 
+    .Menu-deshies-menu {
+        padding: 0px 40px;
+    }
+
     /* FullMenu */
     .full-menu-heading {
-    padding: 0 40px;
-}
-.top-deshies-menu{
-    padding: 0 40px;
-}
-.dishies-tab{
-    margin: 16px 40px 46px 40px;
-}
-.menu-deshies-heading {
-    padding: 0 40px;
-}
-.deshies-main {
-    padding: 0 40px;
-}
+        padding: 0 40px;
+    }
+
+    .dishies-tab {
+        margin: 16px 40px 46px 40px;
+    }
+
+    .menu-deshies-heading {
+        padding: 0 40px;
+    }
+
+    .deshies-main {
+        padding: 0 40px;
+    }
 }
 
 @media (788px >=width) {
@@ -893,26 +938,35 @@ background-color: var(--CTA-hover-colour);
         font-size: 26px;
     }
 
+    .Menu-deshies-menu {
+        font-size: 26px;
+    }
+
     .menu-deshies-images {
         height: 190px;
     }
-.menu-dishies-card-contant {
-    margin: 4px;
-}
-.menu-card-title{
-    font-size: 28px;
-    line-height: 30px;
-    height: 67px;
-}
-.menu-card-para {
-    font-size: 14px;
-    margin-top: 2px;
-    margin-bottom: 4px;
-}
-.menu-card-prize {
- font-size: 26px;
-}
-    .dishies-tab{
+
+    .menu-dishies-card-contant {
+        margin: 4px;
+    }
+
+    .menu-card-title {
+        font-size: 28px;
+        line-height: 30px;
+        height: 67px;
+    }
+
+    .menu-card-para {
+        font-size: 14px;
+        margin-top: 2px;
+        margin-bottom: 4px;
+    }
+
+    .menu-card-prize {
+        font-size: 26px;
+    }
+
+    .dishies-tab {
         width: 100%;
         padding: 0 12px;
     }
@@ -1014,6 +1068,11 @@ background-color: var(--CTA-hover-colour);
         min-width: 263px;
     }
 
+    .Menu-deshies-menu {
+        padding: 0 12px;
+        font-size: 20px;
+    }
+
     .top-deshies-title {
         font-size: 33px;
         margin: 0 0 6px 0;
@@ -1037,20 +1096,24 @@ background-color: var(--CTA-hover-colour);
 
     /* FullMenu */
     .full-menu-heading {
-    padding: 0 12px;
-}
-.top-deshies-menu{
-    padding: 0 12px;
-}
-.dishies-tab{
-    margin: 16px 0px 46px 0px;
-}
-.menu-deshies-heading {
-    padding: 0 12px;
-}
-.deshies-main {
-    padding: 0 12px;
-}
+        padding: 0 12px;
+    }
+
+    .top-deshies-menu {
+        padding: 0 12px;
+    }
+
+    .dishies-tab {
+        margin: 16px 0px 46px 0px;
+    }
+
+    .menu-deshies-heading {
+        padding: 0 12px;
+    }
+
+    .deshies-main {
+        padding: 0 12px;
+    }
 }
 
 @media (444px >=width) {
@@ -1061,20 +1124,23 @@ background-color: var(--CTA-hover-colour);
     .menu-deshies-images {
         height: 170px;
     }
-        .menu-card-title {
+
+    .menu-card-title {
         font-size: 24px;
         line-height: 30px;
         height: 62px;
     }
+
     .menu-card-CTA {
-    height: 35px;
-    font-size: 16px;
-    gap: 2px;
-}
-.menu-card-CTA-icon {
-    height: 20px;
-    width: 20px;
-}
+        height: 35px;
+        font-size: 16px;
+        gap: 2px;
+    }
+
+    .menu-card-CTA-icon {
+        height: 20px;
+        width: 20px;
+    }
 }
 
 @media (510px >=width) {
@@ -1207,6 +1273,16 @@ background-color: var(--CTA-hover-colour);
         width: 50px;
     }
 
+    .reverce-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .forword-icon {
+        height: 30px;
+        width: 30px;
+    }
+
     .forword-icon {
         height: 25px;
         width: 25px;
@@ -1227,6 +1303,10 @@ background-color: var(--CTA-hover-colour);
         font-size: 35px;
     }
 
+    .top-deshies-card {
+        margin-top: 8px;
+    }
+
     .deshies-main {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
@@ -1234,32 +1314,43 @@ background-color: var(--CTA-hover-colour);
     .deshies-main {
         gap: 2px;
     }
-        .menu-dishies-card-contant{
+
+    .menu-dishies-card-contant {
         margin: 4px;
     }
-        .menu-card-CTA{
+
+    .menu-card-CTA {
         height: 30px;
         font-size: 16px;
         gap: 2px;
     }
-    .menu-card-title{
+
+    .menu-card-title {
         font-size: 21px;
         line-height: 22px;
         height: 53px;
     }
+
     .menu-card-prize {
         font-size: 18px;
     }
-        .menu-card-CTA-icon{
+
+    .menu-card-CTA-icon {
         height: 18px;
         width: 18px;
     }
+
     .menu-deshies-images {
         height: 130px;
     }
-    .tab{
-    padding: 4px 24px;
-    height: 43px;
-    font-size: 22px;
-}
+
+    .dishies-tab {
+        margin: 8px 0px 46px 0px;
+    }
+
+    .tab {
+        padding: 4px 24px;
+        height: 43px;
+        font-size: 22px;
+    }
 }
