@@ -641,8 +641,9 @@
 
 .dishies-card {
     height: auto;
-    border: 2px solid black;
+    border: 1px solid var(--text-colour);  
     overflow: hidden;
+
     border-radius: 8px;
 }
 
