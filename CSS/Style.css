@@ -575,7 +575,6 @@
 /* Full Menu */
 .Full-Menu {
     margin-top: 56px;
-    padding: 0 80px 0 80px;
     height: 70%;
     width: 100%;
     overflow: auto;
@@ -584,15 +583,16 @@
 .full-menu-heading {
     font-family: var(--Heading-font-medium);
     font-size: 45.06px;
+    padding: 0 80px;
     color: var(--text-colour);
     margin-bottom: 16px;
 }
 
 .dishies-tab {
-    height: 56px;
-    width: 100%;
+    height: auto;
+    width: 88%;
     display: flex;
-    margin: 16px 0 46px 0;
+    margin: 16px 80px 46px 80px;
     gap: 4px;
     overflow: hidden;
     justify-content: start;
@@ -602,7 +602,19 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
-
+.top-deshies-menu{
+    height: 25px;
+    display: flex;
+    gap: 8px;
+    padding: 0 80px;
+    background-color: transparent;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: var(--text-font-regular);
+    width: auto;
+}
 .tab {
     width: auto;
     padding: 8px 32px;
@@ -624,6 +636,7 @@
 .menu-deshies-heading {
     font-family: var(--Heading-font-medium);
     font-size: 43px;
+    padding: 0 80px;
 }
 .Menu-deshies-main{
     display: flex;
@@ -634,6 +647,7 @@
     height: 40%;
     width: 100%;
     display: grid;
+    padding: 0 80px;
     gap: 4px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     overflow: hidden;
@@ -832,10 +846,21 @@ background-color: var(--CTA-hover-colour);
     }
 
     /* FullMenu */
-    .Full-Menu {
-        padding: 0 40px;
-    }
-
+    .full-menu-heading {
+    padding: 0 40px;
+}
+.top-deshies-menu{
+    padding: 0 40px;
+}
+.dishies-tab{
+    margin: 16px 40px 46px 40px;
+}
+.menu-deshies-heading {
+    padding: 0 40px;
+}
+.deshies-main {
+    padding: 0 40px;
+}
 }
 
 @media (788px >=width) {
@@ -887,6 +912,10 @@ background-color: var(--CTA-hover-colour);
 .menu-card-prize {
  font-size: 26px;
 }
+    .dishies-tab{
+        width: 100%;
+        padding: 0 12px;
+    }
 }
 
 @media (608px >=width) {
@@ -1007,9 +1036,21 @@ background-color: var(--CTA-hover-colour);
     }
 
     /* FullMenu */
-    .Full-Menu {
-        padding: 0 12px;
-    }
+    .full-menu-heading {
+    padding: 0 12px;
+}
+.top-deshies-menu{
+    padding: 0 12px;
+}
+.dishies-tab{
+    margin: 16px 0px 46px 0px;
+}
+.menu-deshies-heading {
+    padding: 0 12px;
+}
+.deshies-main {
+    padding: 0 12px;
+}
 }
 
 @media (444px >=width) {
@@ -1194,7 +1235,7 @@ background-color: var(--CTA-hover-colour);
         gap: 2px;
     }
         .menu-dishies-card-contant{
-        margin: 2px;
+        margin: 3px;
     }
         .menu-card-CTA{
         height: 30px;
@@ -1216,4 +1257,9 @@ background-color: var(--CTA-hover-colour);
     .menu-deshies-images {
         height: 130px;
     }
+    .tab{
+    padding: 4px 24px;
+    height: 43px;
+    font-size: 22px;
+}
 }
