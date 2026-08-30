@@ -594,121 +594,161 @@
     height: 45px;
     width: 45px;
 }
+
 /* Checkout-sidbar */
-.Checkout{
+.Checkout {
     height: auto;
     width: 500px;
     position: fixed;
     top: 0%;
     right: 0%;
-    text-align: center;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    overflow: auto;
+    scrollbar-width: none;
     background-color: var(--Bg-colour);
     z-index: 3;
     padding: 10px;
-border: 2px solid red;
 }
-.Checkout h2{
-font-family: var(--Heading-font-bold);
-font-size: 50px;
-margin-bottom: 8px;
+
+.Checkout h2 {
+    font-family: var(--Heading-font-bold);
+    font-size: 50px;
+    margin-bottom: 8px;
 }
-.checkout-close{
+
+.checkout-close {
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 70px;
+    align-self: flex-start;
     border-radius: 100px;
     fill: var(--text-colour);
 }
-.checkout-close:hover{
+
+.checkout-close:hover {
     background-color: var(--icon-hover);
 }
-.checkout-icon{
+
+.checkout-icon {
     height: 50px;
     width: 50px;
 }
-.checkout-main{
+
+.checkout-main {
     height: auto;
     width: 100%;
-    border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    overflow: auto;
 }
-.checkout-cards{
-    height: 280px;
+
+.checkout-cards {
+    height: 270px;
     width: 234px;
-    border: 1px solid red;
+    border: 1px solid var(--text-colour);
     border-radius: 8px;
     overflow: hidden;
 }
-.checkout-images{
-    height: 160px;
-width: 100%;
-border-radius: 8px 8px 0 0;
+
+.checkout-images {
+    height: 150px;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
 }
-.checkout-card-image{
-height: 100%;
-width: 100%;
-object-fit: cover;
+
+.checkout-card-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
-.checkout-card-content{
-    border: 2px solid red;
+
+.checkout-card-content {
     margin: 5px;
     height: auto;
 }
-.checkout-card-content h4{
-font-family: var(--text-font-medium);
-font-size: 26px;
-height: 40px;
-display: -webkit-box;
--webkit-line-clamp: 1;
--webkit-box-orient: vertical;
-overflow: hidden;
-border: 1px solid black;
+
+.checkout-card-content h4 {
+    font-family: var(--text-font-medium);
+    font-size: 26px;
+    height: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
-.checkout-card-content h5{
-font-family: var(--text-font-medium);
-font-size: 24px;
+
+.checkout-card-content h5 {
+    font-family: var(--text-font-medium);
+    font-size: 24px;
 }
-.checkout-cards-CTA{
+
+.checkout-cards-CTA {
     display: flex;
-height: 30px;
-width: 100%;
-background-color: var(--CTA-colour);
-border: none;
-border-radius: 100px;
-color: var(--text-colour);
-justify-content: space-between;
-padding: 0 8px;
-font-size: 20px;
-align-items: center;
+    height: 30px;
+    width: 100%;
+    background-color: var(--CTA-colour);
+    border: none;
+    border-radius: 100px;
+    color: var(--text-colour);
+    justify-content: space-between;
+    padding: 0 8px;
+    font-size: 20px;
+    align-items: center;
 }
-.checkout-cards-add{
+
+.checkout-cards-add {
     height: 30px;
     width: 30px;
     fill: var(--text-colour);
 }
-.checkout-cards-remove{
+.checkout-cards-add:hover {
+    fill: var(--text-hover-colour);
+    background-color: #e2ac02;
+    border-radius: 100px;
+}
+.checkout-cards-remove:hover {
+    fill: var(--text-hover-colour);
+    background-color: #e2ac02;
+    border-radius: 100px;
+}
+
+.checkout-cards-remove {
     height: 30px;
     width: 30px;
     fill: var(--text-colour);
 }
-.checkout-delivery-states{
-    border: 1px solid red;
+
+.delivery-states {
+    margin-top: 4px;
+}
+
+.checkout-delivery-states {
     display: flex;
     flex-direction: column;
 }
+
 .Delivery-status input[type=radio] {
-transform: scale(1.7);
+    transform: scale(1.8);
+    accent-color: var(--text-hover-colour);
 }
-.Delivery-status{
+
+.checkout-error {
     font-family: var(--text-font-medium);
-    font-size: 22px;
-    border: 2px solid red;
+    font-size: 20px;
+    color: #AC0707;
+    /* display: none; */
+}
+
+.Delivery-status {
+    align-self: self-start;
+    font-family: var(--text-font-medium);
+    font-size: 23px;
     display: flex;
     justify-content: start;
     padding: 0 5px;
@@ -716,36 +756,40 @@ transform: scale(1.7);
     align-items: center;
     gap: 9px;
 }
-.checkout-subtotal{
-font-family: var(--text-font-bold);
-font-size: 31px;
-border: 2px solid red;
-display: flex;
 
-color: var(--text-colour);
+.checkout-subtotal {
+    font-family: var(--text-font-bold);
+    font-size: 31px;
+    margin-top: 8px;
+    display: flex;
+    color: var(--text-colour);
 }
-.checkout-CTA{
-    height: 50px;
-width: 100%;
-font-size: 26px;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 4px;
-border-radius: 100px;
-color: var(--text-colour);
-border: none;
-background-color: var(--CTA-colour);
+
+.checkout-CTA {
+    padding: 10px 0;
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 100px;
+    color: var(--text-colour);
+    border: none;
+    background-color: var(--CTA-colour);
 }
-.checkout-CTA:hover{
+
+.checkout-CTA:hover {
     cursor: pointer;
-background-color: var(--CTA-hover-colour);
+    background-color: var(--CTA-hover-colour);
 }
-.checkout-CTA-icon{
+
+.checkout-CTA-icon {
     height: 25px;
     width: 25px;
     fill: var(--text-colour);
 }
+
 /* Full Menu */
 .Full-Menu {
     margin-top: 56px;
@@ -1120,6 +1164,83 @@ background-color: var(--CTA-hover-colour);
     .dishies-tab {
         width: 100%;
         padding: 0 12px;
+    }
+
+    /* Checkout */
+    .Checkout {
+        width: 361px;
+        padding: 5px;
+    }
+
+    .checkout-cards {
+        height: 220px;
+        width: 169px;
+    }
+
+    .checkout-images {
+        height: 121px;
+    }
+
+    .checkout-card-content h4 {
+        font-size: 20px;
+        height: 32px;
+    }
+
+    .checkout-card-content h5 {
+        font-size: 18px;
+    }
+
+    .checkout-cards-CTA {
+        height: 26px;
+        padding: 0 4px;
+        font-size: 18px;
+    }
+
+    .checkout-cards-remove {
+        height: 25px;
+        width: 25px;
+    }
+
+    .checkout-cards-add {
+        height: 25px;
+        width: 25px;
+    }
+
+    .Checkout h2 {
+        font-size: 45px;
+        margin-bottom: 4px;
+    }
+
+    .checkout-icon {
+        height: 45px;
+        width: 45px;
+    }
+
+    .delivery-status-name {
+        font-size: 22px;
+    }
+
+    .delivery-states {
+        margin-top: 2px;
+    }
+
+    .Delivery-status input[type=radio] {
+        transform: scale(1.6);
+    }
+
+    .checkout-subtotal {
+        font-size: 26px;
+        margin-top: 4px;
+    }
+
+    .checkout-error {
+        font-size: 17px;
+    }
+
+    .checkout-CTA {
+        padding: 9px 0;
+        font-size: 22px;
+        gap: 2px;
     }
 }
 
@@ -1504,12 +1625,69 @@ background-color: var(--CTA-hover-colour);
         height: 43px;
         font-size: 22px;
     }
+
     .cart {
-    height: 70px;
-    width: 70px;
+        height: 70px;
+        width: 70px;
+    }
+
+    .cart-icon {
+        height: 40px;
+        width: 40px;
+    }
+        .Checkout{
+        width: 320px;
+        padding: 5px;
+    }
+        .checkout-cards{
+        height: 196px;
+        width: 149px;
+    }
+        .checkout-images{
+        height: 110px;
+    }
+        .checkout-card-content h4{
+        font-size: 18px;
+        height: 28px;
+    }
+        .checkout-card-content h5{
+        font-size: 16px;
+    }
+        .checkout-cards-CTA{
+        height: 20px;
+        padding: 0 5px;
+        font-size: 15px;
+    }
+        .checkout-cards-remove{
+        height: 20px;
+        width: 20px;
+    }
+        .checkout-cards-add{
+        height: 20px;
+        width: 20px;
+    }
+        .delivery-status-name{
+        font-size: 20px;
+    }
+    .Delivery-status {
+    gap: 4px;
 }
-.cart-icon {
-    height: 40px;
-    width: 40px;
+        .Delivery-status input[type=radio]{
+        transform: scale(1.4);
+    }
+        .checkout-subtotal{
+        font-size: 24px;
+    }
+        .checkout-error{
+        font-size: 15px;
+    }
+        .checkout-CTA{
+        padding: 6px 0;
+        font-size: 20px;
+        gap: 4px;
+    }    
+.checkout-CTA-icon {
+    height: 20px;
+    width: 20px;
 }
 }
