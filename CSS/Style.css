@@ -606,7 +606,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
     overflow: auto;
     scrollbar-width: none;
     background-color: var(--Bg-colour);
@@ -646,10 +645,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
+    overflow: auto;
 }
 
 .checkout-cards {
-    height: 270px;
+    height: 264px;
     width: 234px;
     border: 1px solid var(--text-colour);
     border-radius: 8px;
@@ -1640,7 +1640,7 @@
         padding: 5px;
     }
         .checkout-cards{
-        height: 196px;
+        height: 190px;
         width: 149px;
     }
         .checkout-images{
