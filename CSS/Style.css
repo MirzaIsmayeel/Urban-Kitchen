@@ -597,6 +597,7 @@
 
 /* Checkout-sidbar */
 .Checkout {
+    min-height: 100%;
     height: auto;
     width: 500px;
     position: fixed;
@@ -604,24 +605,28 @@
     right: 0%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     overflow: auto;
     scrollbar-width: none;
     background-color: var(--Bg-colour);
     z-index: 3;
-    padding: 10px;
+    padding: 80px 10px 10px 10px;
 }
 
 .Checkout h2 {
     font-family: var(--Heading-font-bold);
     font-size: 50px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--text-hover-colour);
 }
 
 .checkout-close {
     height: 70px;
     display: flex;
+    position: fixed;
+    top: 1%;
     justify-content: center;
     align-items: center;
     width: 70px;
@@ -642,9 +647,12 @@
 .checkout-main {
     height: auto;
     width: 100%;
+    border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 4px;
+    scrollbar-width: none;
     overflow: auto;
 }
 
@@ -707,11 +715,13 @@
     width: 30px;
     fill: var(--text-colour);
 }
+
 .checkout-cards-add:hover {
     fill: var(--text-hover-colour);
     background-color: #e2ac02;
     border-radius: 100px;
 }
+
 .checkout-cards-remove:hover {
     fill: var(--text-hover-colour);
     background-color: #e2ac02;
@@ -726,6 +736,7 @@
 
 .delivery-states {
     margin-top: 4px;
+    width: 100%;
 }
 
 .checkout-delivery-states {
@@ -741,6 +752,7 @@
 .checkout-error {
     font-family: var(--text-font-medium);
     font-size: 20px;
+    width: 100%;
     color: #AC0707;
     /* display: none; */
 }
@@ -752,6 +764,8 @@
     display: flex;
     justify-content: start;
     padding: 0 5px;
+    width: 100%;
+
     color: var(--text-colour);
     align-items: center;
     gap: 9px;
@@ -760,6 +774,7 @@
 .checkout-subtotal {
     font-family: var(--text-font-bold);
     font-size: 31px;
+    width: 100%;
     margin-top: 8px;
     display: flex;
     color: var(--text-colour);
@@ -1169,7 +1184,7 @@
     /* Checkout */
     .Checkout {
         width: 361px;
-        padding: 5px;
+        padding: 60px 5px 5px 5px;
     }
 
     .checkout-cards {
@@ -1635,59 +1650,74 @@
         height: 40px;
         width: 40px;
     }
-        .Checkout{
+
+    .Checkout {
         width: 320px;
-        padding: 5px;
+        padding: 70px 5px 5px 5px;
     }
-        .checkout-cards{
+
+    .checkout-cards {
         height: 190px;
         width: 149px;
     }
-        .checkout-images{
+
+    .checkout-images {
         height: 110px;
     }
-        .checkout-card-content h4{
+
+    .checkout-card-content h4 {
         font-size: 18px;
         height: 28px;
     }
-        .checkout-card-content h5{
+
+    .checkout-card-content h5 {
         font-size: 16px;
     }
-        .checkout-cards-CTA{
+
+    .checkout-cards-CTA {
         height: 20px;
         padding: 0 5px;
         font-size: 15px;
     }
-        .checkout-cards-remove{
+
+    .checkout-cards-remove {
         height: 20px;
         width: 20px;
     }
-        .checkout-cards-add{
+
+    .checkout-cards-add {
         height: 20px;
         width: 20px;
     }
-        .delivery-status-name{
+
+    .delivery-status-name {
         font-size: 20px;
     }
+
     .Delivery-status {
-    gap: 4px;
-}
-        .Delivery-status input[type=radio]{
+        gap: 4px;
+    }
+
+    .Delivery-status input[type=radio] {
         transform: scale(1.4);
     }
-        .checkout-subtotal{
+
+    .checkout-subtotal {
         font-size: 24px;
     }
-        .checkout-error{
+
+    .checkout-error {
         font-size: 15px;
     }
-        .checkout-CTA{
+
+    .checkout-CTA {
         padding: 6px 0;
         font-size: 20px;
         gap: 4px;
-    }    
-.checkout-CTA-icon {
-    height: 20px;
-    width: 20px;
-}
+    }
+
+    .checkout-CTA-icon {
+        height: 20px;
+        width: 20px;
+    }
 }
