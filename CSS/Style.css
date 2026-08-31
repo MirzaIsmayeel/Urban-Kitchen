@@ -384,7 +384,6 @@
     width: 125px;
 }
 
-/* That full section */
 /* Top-Deshies */
 .Top-deshies {
     overflow: hidden;
@@ -600,10 +599,10 @@
     min-height: 100%;
     height: auto;
     width: 500px;
+    display: none;
     position: fixed;
     top: 0%;
     right: 0%;
-    display: flex;
     flex-direction: column;
     align-items: center;
     overflow: auto;
@@ -805,6 +804,137 @@
     fill: var(--text-colour);
 }
 
+/* Customer Details sidebar */
+.Customer-details {
+    min-height: 100%;
+    height: auto;
+    width: 500px;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    scrollbar-width: none;
+    background-color: var(--Bg-colour);
+    z-index: 3;
+    padding: 80px 10px 10px 10px;
+}
+
+.customer-details-back {
+    height: 70px;
+    display: flex;
+    position: fixed;
+    top: 1%;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    align-self: flex-start;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    fill: var(--text-colour);
+}
+
+.customer-details-back:hover {
+    background-color: var(--icon-hover);
+}
+
+.customer-details-back-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.Customer-details h2 {
+    font-family: var(--Heading-font-bold);
+    font-size: 50px;
+    margin-bottom: 24px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--text-hover-colour);
+}
+
+.cutomer-details {
+    height: auto;
+    width: 100%;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.cutomer-details label {
+    font-family: var(--text-font-medium);
+    font-size: 24px;
+    margin-top: 4px;
+    color: var(--text-colour);
+}
+
+.cutomer-details input {
+    padding: 5px;
+    font-size: 21px;
+    color: var(--text-colour);
+    font-family: var(--text-font-regular);
+    border: 1px solid rgba(0, 0, 0, 0.692);
+    border-radius: 4px;
+}
+
+.cutomer-details select {
+    padding: 5px;
+    font-size: 21px;
+    cursor: pointer;
+    color: var(--text-colour);
+    font-family: var(--text-font-regular);
+    border: 1px solid var(--text-colour);
+    border-radius: 4px;
+}
+
+.cutomer-details option {
+    background-color: var(--text-colour);
+    border: 1px solid rgba(0, 0, 0, 0.692);
+    color: var(--Bg-colour);
+}
+
+.cutomer-details textarea {
+    padding: 5px;
+    height: 130px;
+    border: 1px solid rgba(0, 0, 0, 0.692);
+    border-radius: 4px;
+    font-family: var(--text-font-regular);
+    font-size: 21px;
+}
+
+.customer-error {
+    font-family: var(--text-font-medium);
+    font-size: 20px;
+    width: 100%;
+    color: #AC0707;
+    display: none;
+}
+.customer-CTA {
+    padding: 10px 0;
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 100px;
+    color: var(--text-colour);
+    border: none;
+    background-color: var(--CTA-colour);
+}
+.customer-CTA:hover {
+cursor: pointer;
+    background-color: var(--CTA-hover-colour);
+}
+.customer-payment h3{
+    font-family: var(--text-font-medium);
+    font-size: 29px;
+}.customer-pay{
+    border: 2px solid red;
+    position: absolute;
+    width: 96%;
+    bottom: 1%;
+}
 /* Full Menu */
 .Full-Menu {
     margin-top: 56px;
@@ -1257,6 +1387,26 @@
         font-size: 22px;
         gap: 2px;
     }
+
+    .Customer-details {
+        width: 361px;
+        padding: 60px 5px 5px 5px;
+    }
+
+    .customer-details-back-icon {
+        height: 45px;
+        width: 45px;
+    }
+
+    .Customer-details h2 {
+        font-size: 45px;
+        line-height: 45px;
+        margin-bottom: 4px;
+    }
+
+    .customer-error {
+        font-size: 17px;
+    }
 }
 
 @media (608px >=width) {
@@ -1463,6 +1613,9 @@
         height: 49px;
         width: 49px;
     }
+    .customer-payment h3 {
+    font-size: 26px;
+}
 }
 
 @media (396px >=width) {
@@ -1719,5 +1872,17 @@
     .checkout-CTA-icon {
         height: 20px;
         width: 20px;
+    }
+
+    .Customer-details {
+        width: 320px;
+        padding: 70px 5px 5px 5px;
+    }
+
+    .customer-error {
+        font-size: 15px;
+    }
+        .customer-CTA{
+        font-size: 20px;
     }
 }
