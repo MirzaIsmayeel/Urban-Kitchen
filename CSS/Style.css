@@ -814,7 +814,7 @@
     right: 0%;
     flex-direction: column;
     align-items: center;
-    /* display: none; */
+    display: none;
     overflow: auto;
     scrollbar-width: none;
     background-color: var(--Bg-colour);
