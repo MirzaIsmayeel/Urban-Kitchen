@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scrollbar-width: none;
+}
+
 /* Space Grotesk */
 @font-face {
     font-family: "SpaceGrotesk-Bold";
@@ -62,13 +66,12 @@
     --text-font-medium: "GeneralSans-Medium";
     --text-font-bold: "GeneralSans-Bold";
     --text-font-regular: "GeneralSans-Regular";
-    --icon-hover: #ebebeb;
 }
 
 /* Navbar */
 .navbar {
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 4;
     width: 100%;
 }
 
@@ -79,8 +82,10 @@
     display: flex;
     width: 100%;
     padding: 0 80px;
+    background-color: transparent;
     justify-content: space-between;
     gap: 64px;
+    backdrop-filter: blur(5px);
     background-color: transparent;
     align-items: center;
 }
@@ -151,19 +156,24 @@
 .sidebar-container {
     height: auto;
     width: 100%;
-    padding: 0 0 35px 0;
-    position: absolute;
+    padding: 10px 0;
+    position: fixed;
     background-color: transparent;
-    z-index: 1;
+    z-index: 10;
     backdrop-filter: blur(5px);
-    box-shadow: 0px 4px 15px var(--text-colour);
-    display: none;
+    transform: translateY(-110%);
+    box-shadow: 0px 4px 10px var(--text-colour);
+    transition: 0.2s ease-in-out;
+}
 
+.overflow-hidden {
+    overflow: hidden;
 }
 
 .sidebar-container-open {
+    transform: translateY(0%);
     display: inherit;
-    transition: 0.3s ease-in-out;
+    /* transition: 0.3s ease-in-out; */
 }
 
 .sidebar-content {
@@ -171,7 +181,6 @@
     display: flex;
     flex-direction: column;
     gap: 28px;
-    border: 2px solid;
 }
 
 .sidebar-links a {
@@ -188,8 +197,8 @@
 }
 
 .sidebar-links a:hover {
-    color: var(--text-hover-colour);
-    background-color: #B1B1B1;
+    color: var(--Bg-colour);
+    background-color: var(--text-colour);
 }
 
 .sidebar-CTA {
@@ -220,12 +229,11 @@
     margin-left: 5px;
     margin-top: 5px;
     border-radius: 100px;
-    border: 2px solid;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .sidebar-close:hover {
-    background-color: var(--icon-hover);
+    background-color: rgba(182, 182, 182, 0.178);
     fill: var(--text-hover-colour);
 }
 
@@ -259,7 +267,7 @@
 
 .Hero-content {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top: 30%;
     height: auto;
     max-width: 1440px;
@@ -387,16 +395,16 @@
 /* Top-Deshies */
 .Top-deshies {
     overflow: hidden;
-    height: 50%;
-    margin-top: 56px;
-    display: none;
+    height: auto;
+    margin-top: 52px;
+    /* display: none; */
     width: 100%;
-    padding: 0 80px;
 }
 
 .top-deshies-heading {
     font-family: var(--Heading-font-medium);
     font-size: 45.06px;
+    padding: 0 80px;
     margin-bottom: 4px;
 }
 
@@ -405,6 +413,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    padding: 0 80px;
 }
 
 .top-deshies-menu {
@@ -446,6 +455,8 @@
     position: absolute;
     top: 40%;
     left: -3%;
+    z-index: 4;
+    margin: 0 80px;
     display: flex;
     justify-content: center;
     transform: rotate(180deg);
@@ -456,7 +467,7 @@
 }
 
 .reverce-arrow:hover {
-    background-color: var(--icon-hover);
+    background-color: #f0f0f0;
 }
 
 .top-deshies-card-reverce-icon {
@@ -472,6 +483,8 @@
     top: 40%;
     right: -3%;
     border-radius: 100px;
+    z-index: 4;
+    margin: 0 80px;
     display: flex;
     justify-content: center;
     box-shadow: 1px 2px 10px var(--text-colour);
@@ -481,7 +494,7 @@
 }
 
 .forword-arrow:hover {
-    background-color: var(--icon-hover);
+    background-color: #f0f0f0;
 }
 
 .top-deshies-card-forword-icon {
@@ -495,6 +508,8 @@
     justify-content: start;
     align-items: center;
     gap: 8px;
+    margin: 0 80px;
+    padding: 0 10px;
     overflow: auto;
     scrollbar-width: none;
     display: flex;
@@ -502,17 +517,20 @@
 }
 
 .deshies-cards {
-    border: 1px solid var(--text-colour);
-    height: 440px;
+    height: auto;
+    background-color: #fafafa;
+    box-shadow: 2px 1px 3px rgba(0, 0, 0, 0.63);
     width: 458px;
     min-width: 350px;
     overflow: hidden;
+    margin-bottom: 4px;
     border-radius: 8px;
 }
 
 .deshies-images {
     height: 280px;
     width: auto;
+    overflow: hidden;
 }
 
 .deshies-image {
@@ -521,8 +539,14 @@
     object-fit: cover;
 }
 
+.deshies-image:hover {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
 .deshies-content {
-    height: 183px;
+    height: auto;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -945,7 +969,7 @@
     margin-top: 56px;
     height: 70%;
     overflow-x: hidden;
-    /* display: none; */
+    display: none;
     width: 100%;
 }
 
@@ -1021,23 +1045,24 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 4px;
+    height: auto;
 }
 
 .deshies-main {
-    height: 40%;
+    height: auto;
     width: 100%;
     display: grid;
     padding: 0 80px;
     gap: 4px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    overflow: hidden;
 }
 
 .dishies-card {
     height: auto;
-    border: 1px solid var(--text-colour);
     overflow: hidden;
-
+    background-color: #fafafa;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.63);
     border-radius: 8px;
 }
 
@@ -1046,6 +1071,11 @@
     overflow: hidden;
     width: 100%;
     border-radius: 8px 8px 0 0;
+}
+
+.menu-deshies-image:hover {
+    transition: 0.2s ease-in-out;
+    transform: scale(1.1);
 }
 
 .menu-deshies-image {
@@ -1418,14 +1448,14 @@
     /* Top-deshies */
     .top-deshies-heading {
         font-size: 45px;
+        padding: 0 40px;
     }
 
-    .Top-deshies {
+    .top-deshies-menu-btn {
         padding: 0 40px;
     }
 
     .deshies-cards {
-        border: 1px solid var(--text-colour);
         height: 395px;
         width: 350px;
         min-width: 350px;
@@ -1463,6 +1493,19 @@
 
     .Menu-deshies-menu {
         padding: 0px 40px;
+    }
+
+    .reverce-arrow {
+        margin: 0 30px;
+    }
+
+    .forword-arrow {
+        margin: 0 30px;
+    }
+
+    .top-deshies-card-main {
+        margin: 0;
+        padding: 0 40px;
     }
 
     /* FullMenu */
@@ -1724,9 +1767,6 @@
     }
 
     /* Top-deshies */
-    .Top-deshies {
-        padding: 0 0px 0 12px;
-    }
 
     .top-deshies-menu {
         height: 20px;
@@ -1743,6 +1783,10 @@
         height: 362px;
         width: 350px;
         min-width: 263px;
+    }
+
+    .top-deshies-menu-btn {
+        padding: 0 12px;
     }
 
     .Menu-deshies-menu {
@@ -1763,12 +1807,22 @@
         width: auto;
     }
 
+    .top-deshies-heading {
+        padding: 0 12px;
+    }
+
     .forword-arrow {
         right: 1%;
+        margin: 0 4px;
     }
 
     .reverce-arrow {
         left: -2%;
+        margin: 0 15px;
+    }
+
+    .top-deshies-card-main {
+        padding: 0 12px;
     }
 
     /* FullMenu */
